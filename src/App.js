@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import ReactJkMusicPlayer from "react-jinke-music-player";
+import "react-jinke-music-player/assets/index.css";
+import { songData } from "./api/songs";
 function App() {
+  const options = {
+    audioLists: songData,
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <ReactJkMusicPlayer {...options} />
   );
 }
 
