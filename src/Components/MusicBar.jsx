@@ -1,5 +1,4 @@
-import { songData } from "../api/songs";
-const MusicBar = ({ AudioInstance }) => {
+const MusicBar = ({ AudioInstance, songData }) => {
   return (
     <>
       <div className="flex flex-col p-5">
